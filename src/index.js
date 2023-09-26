@@ -28,9 +28,7 @@ fetchBreeds()
 
     refs.select.innerHTML = markup;
   })
-  .catch(error => {
-    console.error("Помилка обробки даних:", error);
-  });
+  
 
 refs.select.addEventListener("change", () => {
   const selectedBreedId = refs.select.value;
@@ -45,7 +43,7 @@ refs.select.addEventListener("change", () => {
         const catTemperament = catData[0].breeds[0].temperament;
         
         const catInfoHTML = `
-          <img src="${catImage}" width='700' height='500' alt="${catName}">
+          <img src="${catImage}" width='700' height='550' alt="${catName}">
           <h2>${catName}</h2>
           <p>${catDescription}</p>
           <p>Temperament: ${catTemperament}</p>`;
